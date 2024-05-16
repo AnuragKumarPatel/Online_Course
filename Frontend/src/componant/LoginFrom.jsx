@@ -48,7 +48,7 @@ try{
 if(data.success===true)
 {
     
-    toast.success("Logged in");
+    toast.success("LogIn Successful");
     localStorage.setItem('token',data.token)
     localStorage.setItem('email',data.loginUser.email)
     navigate("/dashboard")
@@ -103,7 +103,7 @@ console.log('form data  ',formData);
        
 />
         <span onClick={()=>setUserPassowrd((prev)=>!prev)}
-className="absolute right-10  bottom-[195px]"
+className="absolute right-10  bottom-[160px]"
       >
            {userPassword?(<AiOutlineEyeInvisible/>):(<AiOutlineEye/>)} 
         </span>

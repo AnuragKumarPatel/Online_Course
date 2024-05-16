@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 const SignUpForm = ({setIsLoggedIn}) => {
 
     const [formData, setFormData] = useState({
-        firstName: "", lastName: "", email: "", password: "", conformPassword:"",course:""
+        firstName: "", lastName: "", email: "", password: "", conformPassword:"",course:"Html"
     })
 
     const navigate=useNavigate();
@@ -50,9 +50,10 @@ if(data.success===true)
     // localStorage.setItem('token',data.token)
     localStorage.setItem('email',data.response.email)
     navigate("/dashboard")
-    setIsLoggedIn(false);
-}
+setIsLoggedIn(false);
 
+   
+}
 console.log('form data  ',formData);
 
 

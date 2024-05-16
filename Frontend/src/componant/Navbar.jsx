@@ -24,10 +24,10 @@ const Navbar=(props)=>{
                     <Link to="/">Home</Link>
                 </li>
                 <li className="transition ease hover:scale-110 hover:text-blue-600 duration-500">
-                    <Link to="/">About</Link>
+                    <Link to="/about">About</Link>
                 </li>
                 <li className="transition ease hover:scale-110 hover:text-blue-600 duration-500">
-                    <Link to="/">Contect</Link>
+                    <Link to="/contact">Contact</Link>
                 </li>
             </ul>
            </nav>
@@ -52,7 +52,7 @@ const Navbar=(props)=>{
                     <Link to="/">
                         <button onClick={()=>{
                             setIsLoggedIn(true)
-                            toast.success("Logged Out") 
+                            toast.success("Log Out") 
                           
                         }}
                         className="bg-blue-500  text-white  py-[4px] px-[10px] rounded-[4px]   font-semibold transition ease hover:scale-110 hover:bg-blue-600 duration-300"

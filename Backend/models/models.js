@@ -2,11 +2,6 @@ const mongoose=require('mongoose')
 const nodemailer=require("nodemailer")
 require("dotenv").config();
 const userModel=new mongoose.Schema({
-    user:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"user"
-    },
-
 
     firstName:{
         type: String,
@@ -52,7 +47,6 @@ const userModel=new mongoose.Schema({
 
 userModel.post("save" ,async function(doc){
     try{
-    
         console.log("docs ",doc);
     //transporter
     let transporter=nodemailer.createTransport(
@@ -66,7 +60,7 @@ userModel.post("save" ,async function(doc){
     );
     //send mail
     let info=await transporter.sendMail({
-        from:"codehelp",
+        from:"Online Course Registration",
         to:doc.email,
      
         subject:`You are Register successfully`,
